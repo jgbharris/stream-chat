@@ -148,7 +148,7 @@ export default function UsersMenu({
   }
 
   return (
-    <div className="str-chat absolute z-10 h-full w-full overflow-y-auto border-e border-e-[#DBDDE1] bg-white">
+    <div className="str-chat absolute z-10 h-full w-full overflow-y-auto border-e border-e-[#DBDDE1] bg-white dark:border-e-gray-800 dark:bg-[#17191c]">
       <div className="flex flex-col p-3">
         <div className="mb-3 flex items-center gap-3 text-lg font-bold">
           <ArrowLeft onClick={onClose} className="cursor-pointer" /> Users
@@ -158,7 +158,7 @@ export default function UsersMenu({
           placeholder="Search"
           value={searchInput}
           onChange={(e) => setSearchInput(e.target.value)}
-          className="rounded-full border border-gray-300 px-4 py-2"
+          className="rounded-full border border-gray-300 bg-transparent px-4 py-2 dark:border-gray-800 dark:text-white"
         />
       </div>
       {selectedUsers.length > 0 && (
@@ -219,7 +219,7 @@ function UserResult({
 }: UserResultProps) {
   return (
     <button
-      className="mb-3 flex w-full items-center gap-2 p-2 hover:bg-[#e9eaed]"
+      className="mb-3 flex w-full items-center gap-2 p-2 hover:bg-[#e9eaed] dark:hover:bg-[#1c1e22]"
       onClick={() => onUserClicked(user.id)}
     >
       <input
@@ -252,10 +252,10 @@ function StartGroupChatHeader({
   const [groupChatNameInput, setGroupChatNameInput] = useState("");
 
   return (
-    <div className="sticky top-0 z-10 flex flex-col gap-3 bg-white p-3 shadow-sm">
+    <div className="sticky top-0 z-10 flex flex-col gap-3 bg-white p-3 shadow-sm dark:bg-[#1c1e22]">
       <input
         placeholder="Group name"
-        className="rounded border-gray-300 p-2"
+        className="transparent rounded border-gray-300 p-2 dark:border-gray-800 dark:text-white"
         value={groupChatNameInput}
         onChange={(e) => setGroupChatNameInput(e.target.value)}
       />

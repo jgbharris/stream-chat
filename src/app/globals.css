@@ -15,6 +15,10 @@
   font-family: inherit !important;
 }
 
+.dark .str-chat {
+  --str-chat__disabled-color: theme(colors.gray.600);
+}
+
 .str-chat__channel-search.str-chat__channel-search--with-results.str-chat__channel-search--inline {
   height: fit-content;
 }

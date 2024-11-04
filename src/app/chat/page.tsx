@@ -9,10 +9,12 @@ import { useCallback, useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
 import useWindowSize from "@/hooks/useWindowSize";
 import { mdBreakpoint } from "@/utils/tailwind";
+import { useTheme } from "../ThemeProvider";
 
 export default function ChatPage() {
   const chatClient = useInitializeChatClient();
   const { user } = useUser();
+  const { theme } = useTheme();
 
   const [chatSideBarOpen, setChatSideBarOpen] = useState(false);
   const windowSize = useWindowSize();
@@ -30,16 +32,19 @@ export default function ChatPage() {
 
   if (!chatClient || !user) {
     return (
-      <div className="flex h-screen items-center justify-center">
+      <div className="flex h-screen items-center justify-center bg-gray-100 dark:bg-black">
         <LoadingIndicator size={40} />
       </div>
     );
   }
 
   return (
-    <div className="h-screen bg-gray-100 xl:px-20 xl:py-8">
+    <div className="h-screen bg-gray-100 text-black dark:bg-black dark:text-white xl:px-20 xl:py-8">
       <div className="m-auto flex h-full min-w-[350px] max-w-[1600px] flex-col shadow-sm">
-        <Chat client={chatClient}>
+        <Chat
+          client={chatClient}
+          theme={theme === "dark" ? "str-chat__theme-dark" : "str-chat__light"}
+        >
           <div className=" flex justify-center border-b border-b-[#DBDDE1] p-3 md:hidden">
             <button onClick={() => setChatSideBarOpen(!chatSideBarOpen)}>
               {!chatSideBarOpen ? (
