@@ -1,7 +1,7 @@
 "use client";
 
 import { useUser } from "@clerk/nextjs";
-import { Chat, LoadingIndicator } from "stream-chat-react";
+import { Chat, LoadingIndicator, Streami18n } from "stream-chat-react";
 import useInitializeChatClient from "../hooks/useInitializeChatClient";
 import ChatChannel from "./ChatChannel";
 import ChatSideBar from "./ChatSideBar";
@@ -10,6 +10,9 @@ import { Menu, X } from "lucide-react";
 import useWindowSize from "@/hooks/useWindowSize";
 import { mdBreakpoint } from "@/utils/tailwind";
 import { useTheme } from "../ThemeProvider";
+import { registerServiceWorker } from "@/utils/serviceWorker";
+
+const i18Instance = new Streami18n({ language: "en" });
 
 export default function ChatPage() {
   const chatClient = useInitializeChatClient();
@@ -30,6 +33,17 @@ export default function ChatPage() {
     setChatSideBarOpen(false);
   }, []);
 
+  useEffect(() => {
+    async function setUpServiceWorker() {
+      try {
+        await registerServiceWorker();
+      } catch (error) {
+        console.error("Error setting up service worker", error);
+      }
+    }
+    setUpServiceWorker();
+  }, []);
+
   if (!chatClient || !user) {
     return (
       <div className="flex h-screen items-center justify-center bg-gray-100 dark:bg-black">
@@ -43,6 +57,7 @@ export default function ChatPage() {
       <div className="m-auto flex h-full min-w-[350px] max-w-[1600px] flex-col shadow-sm">
         <Chat
           client={chatClient}
+          i18nInstance={i18Instance}
           theme={theme === "dark" ? "str-chat__theme-dark" : "str-chat__light"}
         >
           <div className=" flex justify-center border-b border-b-[#DBDDE1] p-3 md:hidden">
