@@ -89,6 +89,8 @@ export async function POST(req: Request) {
       })
       .flat();
 
+    console.log("Push promises: ", pushPromises);
+
     await Promise.all(pushPromises);
 
     return NextResponse.json({ success: true }, { status: 200 });

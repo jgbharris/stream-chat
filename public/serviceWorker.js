@@ -31,7 +31,8 @@ sw.addEventListener("push", (event) => {
       body,
       icon,
       badge: "/flowchat_logo.png",
-      // actions: [{ title: "Open chat", action: "open_chat" }], // Getting type issues
+      // image, // Getting type issues  - https://github.com/microsoft/TypeScript-DOM-lib-generator/issues/1749
+      // actions: [{ title: "Open chat", action: "open_chat" }], // Getting type issues -  https://github.com/microsoft/TypeScript-DOM-lib-generator/issues/1725
       tag: channelId,
       // renotify: true, // Getting type issues
       data: { channelId },
