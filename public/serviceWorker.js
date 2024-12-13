@@ -10,7 +10,8 @@ const sw = /** @type {ServiceWorkerGlobalScope & typeof globalThis} */ (
 
 sw.addEventListener("push", (event) => {
   console.log("Received push event", event);
-  const message = event.data?.json();
+  const message = event.data?.json() || {};
+
   const { title, body, icon, channelId } = message;
 
   console.log("Received push message", message);
