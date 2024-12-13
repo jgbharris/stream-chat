@@ -49,6 +49,8 @@ export async function POST(req: Request) {
         !user.unsafeMetadata.mutedChannels.includes(channelId)
     );
 
+    console.log("recipients from push webhook", recipients);
+
     const pushPromises = recipients
       .map((recipient) => {
         const subscriptions = recipient.privateMetadata.subscriptions || [];
@@ -67,7 +69,7 @@ export async function POST(req: Request) {
               }),
               {
                 vapidDetails: {
-                  subject: "mailto:backchat2025@gmail.com",
+                  subject: "mailto:jgbharris@gmail.com",
                   publicKey: env.NEXT_PUBLIC_WEB_PUSH_PUBLIC_KEY,
                   privateKey: env.WEB_PUSH_PRIVATE_KEY,
                 },

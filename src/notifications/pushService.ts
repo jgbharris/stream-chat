@@ -11,9 +11,9 @@ export async function registerPushNotifications() {
     throw Error("Push notifications not supported in this browser");
   }
 
-  const existinSubscription = await getCurrentPushSubscription();
+  const existingSubscription = await getCurrentPushSubscription();
 
-  if (existinSubscription) {
+  if (existingSubscription) {
     throw Error("Existing push subscription found");
   }
 
