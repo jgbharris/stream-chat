@@ -31,10 +31,13 @@ export async function POST(req: Request) {
     console.log("Push web hook body: ", JSON.stringify(event));
 
     const sender = event.user;
+
     const recipientIds = event.channel.members
       .map((member) => member.user_id)
       .filter((id) => id !== sender.id);
     const channelId = event.channel.id;
+
+    // TODO - check post live as getting typescript issue with code below
 
     const recipients = (
       await clerkClient.users.getUserList({
