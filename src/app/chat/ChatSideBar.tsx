@@ -12,9 +12,15 @@ interface ChatSideBarProps {
   user: UserResource;
   show: boolean;
   onClose: () => void;
+  customActiveChannel?: string;
 }
 
-export default function ChatSideBar({ user, show, onClose }: ChatSideBarProps) {
+export default function ChatSideBar({
+  user,
+  show,
+  onClose,
+  customActiveChannel,
+}: ChatSideBarProps) {
   const [usersMenuOpen, setUsersMenuOpen] = useState(false);
 
   useEffect(() => {
@@ -58,6 +64,7 @@ export default function ChatSideBar({ user, show, onClose }: ChatSideBarProps) {
         sort={{ last_message_at: -1 }}
         options={{ presence: true, state: true, limit: 10 }}
         Preview={ChannelPreviewCustom}
+        customActiveChannel={customActiveChannel}
         showChannelSearch
         additionalChannelSearchProps={{
           placeholder: "Search channels",

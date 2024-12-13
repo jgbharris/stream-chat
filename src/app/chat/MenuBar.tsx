@@ -113,7 +113,7 @@ function PushSubscriptionToggleButton() {
       )}
       {hasActivePushSubscription ? (
         <span title="Disable push notifications on this device">
-          <BellOff
+          <BellRing
             className={`cursor-pointer ${loading ? "opacity-10" : ""}`}
             onClick={() => {
               setPushNotificationsEnabled(false);
@@ -122,7 +122,7 @@ function PushSubscriptionToggleButton() {
         </span>
       ) : (
         <span title="Enable push notifications on this device">
-          <BellRing
+          <BellOff
             className={`cursor-pointer ${loading ? "opacity-10" : ""}`}
             onClick={() => {
               setPushNotificationsEnabled(true);
