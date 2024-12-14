@@ -69,7 +69,7 @@ export async function POST(req: Request) {
               }),
               {
                 vapidDetails: {
-                  subject: "mailto:jgbharris@gmail.com",
+                  subject: "mailto:backchat2025@gmail.com",
                   publicKey: env.NEXT_PUBLIC_WEB_PUSH_PUBLIC_KEY,
                   privateKey: env.WEB_PUSH_PRIVATE_KEY,
                 },
