@@ -1,6 +1,6 @@
 import { ComponentPropsWithRef } from "react";
-import Button from "./Button";
 import { LoadingIndicator } from "stream-chat-react";
+import Button from "./Button";
 
 interface LoadingButtonProps extends ComponentPropsWithRef<"button"> {
   loading: boolean;

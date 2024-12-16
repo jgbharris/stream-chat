@@ -1,11 +1,11 @@
+import { UserResource } from "@clerk/types";
+import { useCallback, useEffect, useState } from "react";
 import {
   ChannelList,
   ChannelPreviewMessenger,
   ChannelPreviewUIComponentProps,
 } from "stream-chat-react";
 import MenuBar from "./MenuBar";
-import { UserResource } from "@clerk/types";
-import { useCallback, useEffect, useState } from "react";
 import UsersMenu from "./UsersMenu";
 
 interface ChatSideBarProps {

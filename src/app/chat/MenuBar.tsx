@@ -1,15 +1,15 @@
-import { UserButton } from "@clerk/nextjs";
-import { BellOff, BellRing, Moon, Sun, Users } from "lucide-react";
-import { useTheme } from "../ThemeProvider";
-import { dark } from "@clerk/themes";
-import { useEffect, useState } from "react";
+import DisappearingMessage from "@/components/DisappearingMessage";
 import {
   getCurrentPushSubscription,
   registerPushNotifications,
   unregisterPushNotifications,
 } from "@/notifications/pushService";
+import { UserButton } from "@clerk/nextjs";
+import { dark } from "@clerk/themes";
+import { BellOff, BellRing, Moon, Sun, Users } from "lucide-react";
+import { useEffect, useState } from "react";
 import { LoadingIndicator } from "stream-chat-react";
-import DisappearingMessage from "@/components/DisappearingMessage";
+import { useTheme } from "../ThemeProvider";
 
 interface MenuBarProps {
   onUserMenuClick: () => void;

@@ -8,7 +8,7 @@ import ThemeProvider from "./ThemeProvider";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Flow Chat",
+  title: "Back Chat",
   description: "James Harris - NextJS Chat App",
 };
 

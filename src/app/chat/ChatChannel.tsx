@@ -1,9 +1,9 @@
 import {
   Channel,
-  MessageList,
   MessageInput,
-  Window,
+  MessageList,
   Thread,
+  Window,
 } from "stream-chat-react";
 import { EmojiPicker } from "stream-chat-react/emojis";
 import CustomChannelHeader from "./CustomChannelHeader";

@@ -1,5 +1,5 @@
-import { useUser } from "@clerk/nextjs";
 import { env } from "@/env";
+import { useUser } from "@clerk/nextjs";
 import { useEffect, useState } from "react";
 import { StreamChat } from "stream-chat";
 

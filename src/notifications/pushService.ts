@@ -1,5 +1,5 @@
-import { getReadyServiceWorker } from "@/utils/serviceWorker";
 import { env } from "@/env";
+import { getReadyServiceWorker } from "@/utils/serviceWorker";
 
 export async function getCurrentPushSubscription(): Promise<PushSubscription | null> {
   const sw = await getReadyServiceWorker();

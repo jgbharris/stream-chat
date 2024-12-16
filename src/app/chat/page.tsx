@@ -1,20 +1,20 @@
 "use client";
 
-import { useUser } from "@clerk/nextjs";
-import { Chat, LoadingIndicator, Streami18n } from "stream-chat-react";
-import useInitializeChatClient from "../hooks/useInitializeChatClient";
-import ChatChannel from "./ChatChannel";
-import ChatSideBar from "./ChatSideBar";
-import { useCallback, useEffect, useState } from "react";
-import { Menu, X } from "lucide-react";
 import useWindowSize from "@/hooks/useWindowSize";
-import { mdBreakpoint } from "@/utils/tailwind";
-import { useTheme } from "../ThemeProvider";
-import { registerServiceWorker } from "@/utils/serviceWorker";
 import {
   getCurrentPushSubscription,
   sendPushSubscriptionToServer,
 } from "@/notifications/pushService";
+import { registerServiceWorker } from "@/utils/serviceWorker";
+import { mdBreakpoint } from "@/utils/tailwind";
+import { useUser } from "@clerk/nextjs";
+import { Menu, X } from "lucide-react";
+import { useCallback, useEffect, useState } from "react";
+import { Chat, LoadingIndicator, Streami18n } from "stream-chat-react";
+import useInitializeChatClient from "../hooks/useInitializeChatClient";
+import { useTheme } from "../ThemeProvider";
+import ChatChannel from "./ChatChannel";
+import ChatSideBar from "./ChatSideBar";
 import PushMessageListener from "./PushMessageListener";
 
 interface ChatPageProps {

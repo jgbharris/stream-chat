@@ -1,15 +1,15 @@
-import { useEffect, useState } from "react";
-import {
-  Avatar,
-  useChatContext,
-  LoadingChannels as LoadingUsers,
-} from "stream-chat-react";
-import { UserResource } from "@clerk/types";
-import { Channel, UserResponse } from "stream-chat";
-import { ArrowLeft } from "lucide-react";
+import Button from "@/components/Button";
 import LoadingButton from "@/components/LoadingButton";
 import useDebounce from "@/hooks/useDebounce";
-import Button from "@/components/Button";
+import { UserResource } from "@clerk/types";
+import { ArrowLeft } from "lucide-react";
+import { useEffect, useState } from "react";
+import { Channel, UserResponse } from "stream-chat";
+import {
+  Avatar,
+  LoadingChannels as LoadingUsers,
+  useChatContext,
+} from "stream-chat-react";
 
 interface UsersMenuProps {
   loggedInUser: UserResource;
