@@ -20,16 +20,8 @@
 }
 
 .str-chat__channel-search.str-chat__channel-search--with-results.str-chat__channel-search--inline {
-  /* height: fit-content; */
+  height: fit-content;
 }
-
-/* @media only screen and (max-width: 600px) {
-  .str-chat__message-input {
-    margin-bottom: 10vh;
-    position: sticky;
-  }
-} */
-
 .str-chat__main-panel--thread-open {
   display: none;
 }
