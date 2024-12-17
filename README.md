@@ -6,7 +6,7 @@ It also uses the **web push** API to send push notifications about new chat mess
 
 Other technologies used:
 
-- Next.js 13 app router
+- Next.js 14 app router
 - Clerk for authentication
 - TailwindCSS
 - TypeScript
