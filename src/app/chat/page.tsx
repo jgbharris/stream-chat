@@ -84,14 +84,14 @@ export default function ChatPage({
   }
 
   return (
-    <div className="h-screen bg-gray-100 text-black dark:bg-black dark:text-white sm:py-10 xl:px-20 xl:py-8">
+    <div className="h-screen bg-gray-100 text-black dark:bg-black dark:text-white sm:h-full sm:py-10 xl:px-20 xl:py-8">
       <div className="m-auto flex h-full min-w-[350px] max-w-[1600px] flex-col shadow-sm">
         <Chat
           client={chatClient}
           i18nInstance={i18Instance}
           theme={theme === "dark" ? "str-chat__theme-dark" : "str-chat__light"}
         >
-          <div className=" flex justify-center border-b border-b-[#DBDDE1] p-3 md:hidden">
+          <div className="flex justify-center border-b border-b-[#DBDDE1] p-3 md:hidden">
             <button onClick={() => setChatSideBarOpen(!chatSideBarOpen)}>
               {!chatSideBarOpen ? (
                 <span className="flex items-center gap-1">

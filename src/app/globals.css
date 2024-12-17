@@ -23,12 +23,12 @@
   /* height: fit-content; */
 }
 
-@media only screen and (max-width: 600px) {
+/* @media only screen and (max-width: 600px) {
   .str-chat__message-input {
     margin-bottom: 10vh;
     position: sticky;
   }
-}
+} */
 
 .str-chat__main-panel--thread-open {
   display: none;
