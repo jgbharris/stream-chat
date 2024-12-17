@@ -7,22 +7,22 @@ export default function Home() {
     <div className="flex h-screen w-screen flex-col items-center justify-center bg-gradient-to-tl from-gray-200 via-gray-100 to-black">
       <Image
         src="/back_chat_logo_transparent.png"
-        width={700}
-        height={700}
+        width={600}
+        height={600}
         alt="Back Chat Logo"
       />
       <div className="flex">
         <Image
           src="/screenshot_light.png"
-          width={400}
-          height={400}
+          width={350}
+          height={350}
           alt="App in light theme"
           className="skew-y-6"
         />
         <Image
           src="/screenshot_dark.png"
-          width={400}
-          height={400}
+          width={350}
+          height={350}
           alt="App in dark theme"
           className="mx-20 skew-y-6"
         />
