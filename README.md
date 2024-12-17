@@ -7,6 +7,8 @@
 <img width="1652" alt="Screenshot 2024-12-17 at 15 19 55" src="https://github.com/user-attachments/assets/3e7daaf4-164e-43f5-9624-23914f98427d" />
 
 
+Live demo: [[https://jgbharris-bnb-clone.vercel.app/](https://backchat-app.vercel.app/)]
+
 
 
 This project uses [Stream's chat SDK](https://getstream.io/try-for-free/?utm_source=codinginflow&utm_medium=sponsorship&utm_content=&utm_campaign=Codinginflow_2023Aug_CTA_klmh22) to provide a fully functional live chat with attachments, reactions, threads, and more.
