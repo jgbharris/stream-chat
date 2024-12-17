@@ -1,5 +1,9 @@
 # BackChat - Next.js 14 Messaging App
 
+<img width="1657" alt="Screenshot 2024-12-17 at 15 17 14" src="https://github.com/user-attachments/assets/0c44b4eb-174b-4c53-98a9-e202199e51a8" />
+
+
+
 This project uses [Stream's chat SDK](https://getstream.io/try-for-free/?utm_source=codinginflow&utm_medium=sponsorship&utm_content=&utm_campaign=Codinginflow_2023Aug_CTA_klmh22) to provide a fully functional live chat with attachments, reactions, threads, and more.
 
 It also uses the **web push** API to send push notifications about new chat messages even if the browser window is closed.
@@ -10,3 +14,4 @@ Other technologies used:
 - Clerk for authentication
 - TailwindCSS
 - TypeScript
+
