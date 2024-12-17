@@ -84,8 +84,8 @@ export default function ChatPage({
   }
 
   return (
-    <div className="h-screen bg-gray-100 text-black dark:bg-black dark:text-white xl:px-20 xl:py-8">
-      <div className="m-auto flex h-screen min-w-[350px] max-w-[1600px] flex-col shadow-sm">
+    <div className="h-screen bg-gray-100 text-black dark:bg-black dark:text-white  xl:px-20 xl:py-8">
+      <div className="m-auto flex h-full min-w-[350px] max-w-[1600px] flex-col shadow-sm ">
         <Chat
           client={chatClient}
           i18nInstance={i18Instance}

@@ -20,7 +20,7 @@
 }
 
 .str-chat__channel-search.str-chat__channel-search--with-results.str-chat__channel-search--inline {
-  height: fit-content;
+  /* height: fit-content; */
 }
 
 .str-chat__main-panel--thread-open {
