@@ -25,7 +25,8 @@
 
 @media only screen and (max-width: 600px) {
   .str-chat__message-input {
-    margin-bottom: 5vh;
+    margin-bottom: 10vh;
+    position: sticky;
   }
 }
 
