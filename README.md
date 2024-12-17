@@ -7,7 +7,7 @@
 <img width="1652" alt="Screenshot 2024-12-17 at 15 19 55" src="https://github.com/user-attachments/assets/3e7daaf4-164e-43f5-9624-23914f98427d" />
 
 
-Live demo: [[https://jgbharris-bnb-clone.vercel.app/](https://backchat-app.vercel.app/)]
+Live demo: [https://backchat-app.vercel.app/](https://backchat-app.vercel.app/)
 
 
 
